@@ -5,18 +5,16 @@ var listaSurname = document.getElementById("listaSurname");
 surname.push(surnameUtente);
 surname.sort();
 console.log(surname);
-surnameposition = 0;
+var surnameposition = 0;
 
 
 // lOGICA
- for (i = 0; i < surname.lentgh; i++) {
-   listaSurname.innerHTML = '<li>' + surname [i] + '</li>';
-   console.log(surname);
+ for (var i = 0; i < surname.length; i++) {
+   listaSurname.innerHTML += '<li>' + surname[i] + '</li>';
 
-
-  if (surname [i] == surnameUtente) {
+  if (surname[i] == surnameUtente) {
       surnameposition = i;
       console.log(surnameposition);
   }
 }
-document.getElementById('listaSurname').innerHTML = surnameposition + 1;
+document.getElementById('listaSurname').innerHTML += surnameposition + 1;
